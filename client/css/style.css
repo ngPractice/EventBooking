@@ -1,0 +1,13 @@
+.content {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+}
+
+.listItem {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+}

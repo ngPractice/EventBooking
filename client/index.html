@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <title> Event Booking Application </title>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <!-- auto bootstrap angular application -->
+  <body ng-app="eventModule" ng-controller="PaymentDetail as pd">
+    <div layout="column" layout-fill>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2 md-truncate flex class="title">{{ pd.title }}</h2>
+        </div>
+      </md-toolbar>
+      <div class="container" layout="row" flex>
+        <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp">
+          <md-list>
+            <md-list-item ng-repeat="option in pd.options">
+              <md-button class="listItem">
+                {{option}}
+              </md-button>
+            </md-list-item>
+          </md-list>
+        </md-sidenav>
+        <md-content flex class="md-padding" layout-xs="column" layout="row">
+          <div flex-xs flex-gt-xs="50" layout="column">
+            <md-card md-theme="default" md-theme-watch>
+              <md-card-title>
+                <md-card-title-text>
+                  <span class="md-headline">Event Details</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                  <div class="md-media-lg card-media">
+                    <img src="images/event.jpg">
+                  </div>
+                </md-card-title-media>
+              </md-card-title>
+              <md-card-actions layout="row" layout-align="end center">
+                <md-button class="md-raised md-primary">Pay Now</md-button>
+              </md-card-actions>
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="7WY8E2GMV2CT4">
+                <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+              </form>
+
+            </md-card>
+          </div>
+        </md-content>
+      </div>
+    </div>
+
+    <!-- Loading Scripts -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/payment-details/payment-detail.controller.js"></script>
+  </body> <!-- End body here -->
+</html> <!-- End html here -->
