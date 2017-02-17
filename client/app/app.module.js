@@ -2,7 +2,8 @@
 (function () {
   'use strict';
   var dependencies = [
-    'ngMaterial'
+    'ngMaterial',
+    'ui.router'
   ];
   // Created eventModule module here which is main module
   // of Event Booking applicaiton.

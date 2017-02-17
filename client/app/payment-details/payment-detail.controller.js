@@ -13,7 +13,7 @@
   function PaymentDetail() {
     var vm = this;
     this.title = 'Event Booking Application';
-    this.options = ['Portfolio', 'Event List', 'Contact'];
+    this.options = ['portfolio', 'eventlist', 'contact'];
   }
 
 })();
