@@ -2,38 +2,42 @@
 <html lang="eng">
   <head>
     <title> Event Booking Application </title>
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <!-- auto bootstrap angular application -->
   <body ng-app="eventModule" ng-controller="PaymentDetail as pd">
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a class="navbar-brand" href="#">Event Booking</a>
         </div>
-        <ul class="nav navbar-nav">
-          <li><a ui-sref="portfolio">Portfolio</a></li>
-          <li><a ui-sref="eventlist">Eventlist</a></li>
-          <li><a ui-sref="contact">Contact</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li ui-sref-active="active"><a ui-sref="portfolio">Portfolio</a></li>
+            <li ui-sref-active="active"><a ui-sref="eventlist">Eventlist</a></li>
+            <li ui-sref-active="active"><a ui-sref="contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
-    <div class="container">
-      <div ui-view></div>
+    <div class="event-container" ui-view>
     </div>
     <!-- Loading Scripts -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
-    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="app/app.module.js"></script>
     <script src="app/app.route-config.js"></script>
     <script src="app/payment-details/payment-detail.controller.js"></script>

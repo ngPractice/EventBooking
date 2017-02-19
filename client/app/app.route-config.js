@@ -3,7 +3,8 @@
     .module('eventModule')
     .config(config);
 
-  function config($stateProvider, $urlRouterProvider) {
+  function config($stateProvider, $urlRouterProvider, $locationProvider) {
+    $locationProvider.hashPrefix('');
     $urlRouterProvider.otherwise('/eventlist');
 
     $stateProvider
@@ -19,5 +20,6 @@
         url: '/contact',
         templateUrl: 'app/contact/contact.html'
       })
+
   }
 })();

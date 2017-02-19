@@ -2,7 +2,6 @@
 (function () {
   'use strict';
   var dependencies = [
-    'ngMaterial',
     'ui.router'
   ];
   // Created eventModule module here which is main module
